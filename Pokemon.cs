@@ -9,10 +9,10 @@ namespace PokeManos
     internal class Pokemon
     {
         //características individuais
-        string nome;
-        string[] tipo = new string[4];
-        string especie;
-        int natureza;
+        string name;
+        string[] type = new string[4];
+        string specie;
+        int nature;
         string[] moves = new string[4];
         int level;
         double[] atributes = new double[6];
@@ -22,45 +22,13 @@ namespace PokeManos
         int initial;
 
         //características influenciaveis
-        int vida;
-
-        //Pokémons ativos/ na bolsa
-        string[] pkmAtivo = new string[6];
-
-        //Pokémons no PC
-        string[] pkmPc = new string[60];
+        int HP;
 
         //características gerais/randômicas
         string[,] species = new string[50, 2];
 
-        //Começo dos métodos
 
-        //Seleção de iniciais
-        public int iniciais(int inicial)
-        {
-            switch (inicial)
-            {
-                case 1:
-                    pkmAtivo[inicial - 1] = "fogo 1";
-                    initial = inicial;
-                    break;
-
-                case 2:
-                    pkmAtivo[inicial - 1] = "água 1";
-                    initial = inicial;
-                    break;
-
-                case 3:
-                    pkmAtivo[inicial - 1] = "planta 1";
-                    initial = inicial;
-                    break;
-
-                default:
-                    inicial = 0;
-                    break;
-            }
-            return initial;
-        }
+        
 
         //Método construtor do pokémon(inicial)
         public Pokemon(string name, int initial) 
